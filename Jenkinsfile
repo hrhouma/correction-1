@@ -24,7 +24,7 @@ pipeline {
                         withEnv([
                             "JAVA_HOME=C:\\Program Files\\Java\\jdk1.8.0_202",
                             "PYTHON_HOME=C:\\Users\\rehou\\AppData\\Local\\Microsoft\\WindowsApps",
-                            "PATH=${env.PATH};${env.JAVA_HOME}\\bin;${env.PYTHON_HOME}"
+                            "PATH=%JAVA_HOME%\\bin;%PYTHON_HOME%;%PATH%"
                         ]) {
                             bat 'echo "Running on Windows"'
                             bat 'javac HelloWorld.java'
