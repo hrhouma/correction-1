@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/hrhouma/correction-1.git'
+                git branch: 'main', url: 'https://github.com/hrhouma/hello-python.git'
             }
         }
         stage('Build') {
@@ -23,7 +23,7 @@ pipeline {
                         bat 'echo "Running on Windows"'
                         bat 'javac HelloWorld.java'
                         bat 'java HelloWorld'
-                        bat 'python3 hello.py'
+                        bat 'python hello.py'
                     }
                 }
             }
